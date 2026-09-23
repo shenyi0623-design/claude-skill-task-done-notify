@@ -1,3 +1,5 @@
+**English** | [简体中文](README.zh-CN.md)
+
 # claude-skill-task-done-notify
 
 A Claude Code plugin marketplace with one skill: **get a Windows toast when an

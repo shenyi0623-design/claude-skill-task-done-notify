@@ -5,8 +5,9 @@
 A Claude Code plugin marketplace with one skill: **get a Windows toast when an
 agent task finishes, but only if you're not looking at the terminal.**
 
-A two-second answer never interrupts you. A four-minute refactor you walked
-away from does.
+A notification fires only when **both** hold: the turn ran at least 30 seconds,
+and the terminal window is not in the foreground *right now*. Quick answers
+never interrupt you; a long task you switched away from will.
 
 > **Windows only.** The skill uses Win32 foreground-window detection and WinRT
 > toast notifications. It does nothing on macOS or Linux.

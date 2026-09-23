@@ -4,8 +4,7 @@ Pops a Windows toast when an agent task finishes — but **only** when the
 terminal window running the agent is not in the foreground, and only when the
 turn ran longer than a threshold (default 30 s).
 
-A two-second answer never interrupts you. A four-minute refactor you walked
-away from does.
+Quick answers never interrupt you; a long task you switched away from will.
 
 ## Requirements
 

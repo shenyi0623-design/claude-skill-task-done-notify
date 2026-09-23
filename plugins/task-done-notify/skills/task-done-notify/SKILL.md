@@ -7,9 +7,9 @@ description: 当用户希望在 agent 任务（Claude Code / Codex / Gemini CLI 
 
 ## 概述
 
-作为插件提供一对 hook：`UserPromptSubmit` 记录本轮开始时间，`Stop` 判断「终端窗口是否在前台」+「本轮耗时是否超过阈值」，只有两者都满足才弹一条 Windows 系统通知。
+作为插件提供一对 hook：`UserPromptSubmit` 记录本轮开始时间，`Stop` 负责判定并弹通知。
 
-短问答不打扰；跑了几分钟的任务、而你去刷网页了，才会响。通知头会显示正确的工具名（Claude Code / Codex / Gemini CLI …）。
+触发要**同时**满足两个条件：本轮耗时 ≥ `thresholdSeconds`（默认 30 秒），且**此刻**终端窗口不在前台。「前台」是瞬时状态而非累计时长——判定的是任务跑了多久，不是你离开多久。所以几秒的问答不打扰；你切去别处、任务又跑了足够久时才会响。通知头会显示正确的工具名（Claude Code / Codex / Gemini CLI …）。
 
 ## 何时使用
 

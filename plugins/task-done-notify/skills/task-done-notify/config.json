@@ -1,0 +1,88 @@
+{
+  "enabled": true,
+
+  "thresholdSeconds": 30,
+
+  "sound": true,
+  "fallbackSound": true,
+
+  "title": "✅ 任务已完成",
+  "body": "用时 {elapsed} · 终端窗口不在前台",
+  "elapsedMinutesSeconds": "{m} 分 {s} 秒",
+  "elapsedSeconds": "{s} 秒",
+
+  "terminalWindowClasses": [
+    "ConsoleWindowClass",
+    "CASCADIA_HOSTING_WINDOW_CLASS"
+  ],
+
+  "terminalProcesses": [
+    "WindowsTerminal",
+    "conhost",
+    "cmd",
+    "powershell",
+    "pwsh",
+    "OpenConsole",
+    "wezterm-gui",
+    "alacritty",
+    "mintty",
+    "ConEmu",
+    "ConEmu64",
+    "Tabby",
+    "hyper"
+  ],
+
+  "checkAncestorNames": true,
+
+  "defaultTool": "generic",
+
+  "tools": {
+    "claude-code": {
+      "displayName": "Claude Code",
+      "appId": "AgentTaskDone.ClaudeCode"
+    },
+    "codex": {
+      "displayName": "Codex",
+      "appId": "AgentTaskDone.Codex"
+    },
+    "gemini-cli": {
+      "displayName": "Gemini CLI",
+      "appId": "AgentTaskDone.GeminiCli"
+    },
+    "opencode": {
+      "displayName": "opencode",
+      "appId": "AgentTaskDone.OpenCode"
+    },
+    "aider": {
+      "displayName": "Aider",
+      "appId": "AgentTaskDone.Aider"
+    },
+    "generic": {
+      "displayName": "AI Agent",
+      "appId": "AgentTaskDone.Generic"
+    }
+  },
+
+  "toolProcessNames": {
+    "claude": "claude-code",
+    "codex": "codex",
+    "gemini": "gemini-cli",
+    "opencode": "opencode",
+    "aider": "aider"
+  },
+
+  "toolCommandLinePatterns": [
+    { "pattern": "@anthropic-ai/claude-code", "tool": "claude-code" },
+    { "pattern": "@openai/codex",             "tool": "codex" },
+    { "pattern": "@google/gemini-cli",        "tool": "gemini-cli" },
+    { "pattern": "opencode",                  "tool": "opencode" },
+    { "pattern": "aider",                     "tool": "aider" }
+  ],
+
+  "toolEnvMarkers": [
+    { "var": "CLAUDECODE",              "tool": "claude-code" },
+    { "var": "CLAUDE_CODE_ENTRYPOINT",  "tool": "claude-code" }
+  ],
+
+  "debug": false
+}

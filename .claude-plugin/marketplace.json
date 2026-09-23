@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-skill-task-done-notify",
+  "description": "Local Claude Code plugins: task-completion notifications for Windows.",
+  "owner": {
+    "name": "shenyi0623-design"
+  },
+  "plugins": [
+    {
+      "name": "task-done-notify",
+      "description": "Pops a Windows toast when an agent task (Claude Code, Codex, Gemini CLI, ...) finishes and the terminal window is not in the foreground. Stays quiet for short answers. Windows only.",
+      "author": {
+        "name": "shenyi0623-design"
+      },
+      "category": "productivity",
+      "source": "./plugins/task-done-notify"
+    }
+  ]
+}

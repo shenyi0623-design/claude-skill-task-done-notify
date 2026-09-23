@@ -1,0 +1,38 @@
+{
+  "description": "Windows toast when an agent task finishes while the terminal window is not in the foreground. Stays quiet for short answers (see skills/task-done-notify/config.json).",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe",
+            "args": [
+              "-NoProfile",
+              "-File",
+              "${CLAUDE_PLUGIN_ROOT}/skills/task-done-notify/mark-start.ps1"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe",
+            "args": [
+              "-NoProfile",
+              "-File",
+              "${CLAUDE_PLUGIN_ROOT}/skills/task-done-notify/notify.ps1"
+            ],
+            "timeout": 30,
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+# Store everything with LF so clones are byte-identical across platforms.
+# PowerShell reads LF-only .ps1 files without complaint, and the scripts are
+# validated as pure ASCII, so no BOM/CRLF assumptions leak in.
+* text=auto eol=lf
+
+*.png binary
+*.zip binary

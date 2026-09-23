@@ -1,0 +1,10 @@
+# debug/scratch output from `claude --debug-file` and manual test runs
+*.log
+*.bak
+*.bak.*
+debug.log
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini

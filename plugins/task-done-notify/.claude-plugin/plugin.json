@@ -1,0 +1,16 @@
+{
+  "name": "task-done-notify",
+  "version": "1.0.0",
+  "description": "Pops a Windows toast when an agent task finishes and the terminal window is not in the foreground.",
+  "author": {
+    "name": "shenyi0623-design"
+  },
+  "license": "MIT",
+  "keywords": [
+    "notification",
+    "toast",
+    "windows",
+    "hooks",
+    "productivity"
+  ]
+}
